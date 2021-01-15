@@ -1,5 +1,10 @@
 <template>
 	<div id="app">
+		<!-- <style>
+			.active {
+				background: #fff
+			}
+		</style> -->
 		<div>
 			<h2 class="heading">Gates</h2>
 			<div class="img-block">
@@ -15,9 +20,9 @@
 			</div>
 			<h4>Which image do you need?</h4>
 			<div class="button-block">
-				<span :class="{ active: src1 }" @click="change1">Image 1</span>
-				<span :class="{ active: src2 }" @click="change2">Image 2</span>
-				<span :class="{ active: src3 }" @click="change3">Image 3</span>
+				<span :class="{ 'non-active': src1 }" class="active" @click="change1">Image 1</span>
+				<span :class="{ 'non-active': src2 }" class="active" @click="change2">Image 2</span>
+				<span :class="{ 'non-active': src3 }" class="active" @click="change3">Image 3</span>
 			</div>
 		</div>
 		<gate/>
@@ -69,7 +74,7 @@ export default {
 	.button-block {
 		margin-top: 50px;
 	}
-	.button-block span {
+	.active {
 		padding: 10px 15px;
 		width: 60px;
 		margin: 15px auto;
@@ -77,7 +82,7 @@ export default {
 		cursor: pointer;
 		background-color: #ccc;
 	}
-	.active {
+	.non-active {
 		background-color: #fff;
 	}
 </style>
