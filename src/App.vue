@@ -20,9 +20,18 @@
 			</div>
 			<h4>Which image do you need?</h4>
 			<div class="button-block">
-				<span :class="{ 'non-active': src1 }" class="active" @click="change1">Image 1</span>
-				<span :class="{ 'non-active': src2 }" class="active" @click="change2">Image 2</span>
-				<span :class="{ 'non-active': src3 }" class="active" @click="change3">Image 3</span>
+				<span 
+					:class="{ 'non-active': src1 }" 
+					class="active" 
+					@click="change1">Image 1</span>
+				<span 
+					:class="{ 'non-active': src2 }" 
+					class="active" 
+					@click="change2">Image 2</span>
+				<span 
+					:class="{ 'non-active': src3 }" 
+					class="active" 
+					@click="change3">Image 3</span>
 			</div>
 		</div>
 		<gate/>
